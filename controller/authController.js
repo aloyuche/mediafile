@@ -86,7 +86,7 @@ module.exports.login_post = async (req, res) => {
     const User = await userAuth.login(username, password);
     const token = createToken(User._id);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(200).json({ user: User._id });
+    res.status(200).json({ User });
     // req.flash("message", "Successfully logged in");
     // res.redirect("/");
   } catch (error) {
