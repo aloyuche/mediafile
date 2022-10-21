@@ -106,6 +106,7 @@
             password_error.textContent = data.errors.password;
           }
           if (data.User) {
+            console.log(data.User);
             location.assign("/");
           }
         } catch (err) {
