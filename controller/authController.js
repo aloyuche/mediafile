@@ -89,8 +89,8 @@ module.exports.login_post = async (req, res) => {
     res.status(200).json({ User });
     // req.flash("message", "Successfully logged in");
     // res.redirect("/");
-  } catch (error) {
-    const errors = ErrorHandler(error);
+  } catch (err) {
+    const errors = ErrorHandler(err);
     // req.flash("Invalide user credentials");
     // res.redirect("/login");
     res.status(400).json({ errors });
