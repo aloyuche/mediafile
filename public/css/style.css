@@ -114,7 +114,9 @@ input {
 }
 .usernameError,
 .passwordError {
-  background-color: #e8c29a;
+  background-color: #7de6ec;
+  color: #170408;
+  font-size: 1.3em;
   border: none;
 }
 .thumbnail.img {
