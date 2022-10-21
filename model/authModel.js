@@ -68,6 +68,6 @@ authSchema.statics.login = async function (username, password) {
 
 const userAuth = mongoose.model("userauth", authSchema);
 module.exports = userAuth;
-♦
+
 //Cart A has product A with primary-key
 //cart B see Product A as Foreign Key
