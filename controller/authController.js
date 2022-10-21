@@ -16,7 +16,10 @@ const ErrorHandler = (err) => {
   }
 
   // Ceck Password Length
-  if (err.message === "Invalid password, must be more than 6 character") {
+  if (
+    err.message === "Invalid password, must be more than 6 character" ||
+    err.message === "Password is required"
+  ) {
     errors.password = "The Password isnot correct";
   }
   //Duplicating Error
