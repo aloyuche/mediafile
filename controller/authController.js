@@ -6,6 +6,16 @@ const ErrorHandler = (err) => {
   console.log(err.message, err.code);
   let errors = { username: "", password: "" };
 
+  // To check User error
+  if (err.message === "Incorrect Username") {
+    errors.username = "Invalid Username";
+  }
+
+  if (err.message === "Incorrect Password") {
+    errors.username = "Invalid Password";
+  }
+
+  // Ceck Password Length
   if (err.message === "Invalid password, must be more than 6 character") {
     errors.password = "The Password isnot correct";
   }
