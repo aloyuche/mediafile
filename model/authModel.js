@@ -29,6 +29,7 @@ const authSchema = new mongoose.Schema(
 
     password: {
       type: String,
+      required: true,
       minlength: [6, "Invalid password, must be more than 6 character"],
     },
   },
@@ -58,10 +59,10 @@ authSchema.statics.login = async function (username, password) {
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
 
-    if (!auth) {
-      throw Error("Incorrect password");
+    if (auth) {
+      return user;
     }
-    return user;
+    throw Error("Incorrect password");
   }
   throw Error("Incorrect Username");
 };
