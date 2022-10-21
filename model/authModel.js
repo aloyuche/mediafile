@@ -58,16 +58,16 @@ authSchema.statics.login = async function (username, password) {
   if (user) {
     const auth = await bcrypt.compare(password, user.password);
 
-    if (auth) {
-      return user;
+    if (!auth) {
+      throw Error("Incorrect password");
     }
-    throw Error("Incorrect password");
+    return user;
   }
   throw Error("Incorrect Username");
 };
 
 const userAuth = mongoose.model("userauth", authSchema);
 module.exports = userAuth;
-
+♦
 //Cart A has product A with primary-key
 //cart B see Product A as Foreign Key
