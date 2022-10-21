@@ -29,7 +29,7 @@ const ErrorHandler = (err) => {
   }
 
   // Validating Errors
-  if (err.message.includes("userauth validation failed")) {
+  if (err.message.includes("user validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       // This will specify the exact error
       errors[properties.path] = properties.message;
