@@ -67,12 +67,12 @@
           <div class="form-group">
             <label for="username">Username:</label>
             <input type="text" name="username" />
-            <div class="username error"></div>
+            <div class="username-error"></div>
           </div>
           <div class="form-group">
             <label for="password">Password:</label>
             <input type="password" name="password" />
-            <div class="password error"></div>
+            <div class="password-error"></div>
           </div>
           <br /><br />
           <button class="btn btn-success">Log In</button>
@@ -82,8 +82,8 @@
     </div>
     <script>
       const form = document.querySelector("form");
-      const username_error = document.querySelector(".username.error");
-      const password_error = document.querySelector(".password.error");
+      const username_error = document.querySelector(".username-error");
+      const password_error = document.querySelector(".password-error");
 
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
@@ -105,7 +105,7 @@
             username_error.textContent = data.errors.username;
             password_error.textContent = data.errors.password;
           }
-          if (data.user) {
+          if (data.User) {
             location.assign("/");
           }
         } catch (err) {
