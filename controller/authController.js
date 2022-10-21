@@ -5,21 +5,15 @@ const jwt = require("jsonwebtoken");
 const ErrorHandler = (err) => {
   console.log(err.message, err.code);
   let errors = { username: "", password: "" };
-
-  // To check User error
   if (err.message === "Incorrect Username") {
-    errors.username = "Invalid Username";
+    errors.username = "Invalid username";
   }
 
-  if (err.message === "Incorrect Password") {
+  if (err.message === "Incorrect password") {
     errors.password = "Invalid Password";
   }
 
-  // Ceck Password Length
-  if (
-    err.message === "Invalid password, must be more than 6 character" ||
-    err.message === "Password is required"
-  ) {
+  if (err.message === "Invalid password, must be more than 6 character") {
     errors.password = "The Password isnot correct";
   }
   //Duplicating Error
@@ -29,7 +23,7 @@ const ErrorHandler = (err) => {
   }
 
   // Validating Errors
-  if (err.message.includes("user validation failed")) {
+  if (err.message.includes("userauth validation failed")) {
     Object.values(err.errors).forEach(({ properties }) => {
       // This will specify the exact error
       errors[properties.path] = properties.message;
@@ -89,11 +83,11 @@ module.exports.login_post = async (req, res) => {
     const User = await userAuth.login(username, password);
     const token = createToken(User._id);
     res.cookie("jwt", token, { httpOnly: true, maxAge: maxAge * 1000 });
-    res.status(200).json({ User });
+    res.status(200).json({ user: User._id });
     // req.flash("message", "Successfully logged in");
     // res.redirect("/");
-  } catch (err) {
-    const errors = ErrorHandler(err);
+  } catch (error) {
+    const errors = ErrorHandler(error);
     // req.flash("Invalide user credentials");
     // res.redirect("/login");
     res.status(400).json({ errors });
