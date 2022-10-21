@@ -12,7 +12,7 @@ const ErrorHandler = (err) => {
   }
 
   if (err.message === "Incorrect Password") {
-    errors.username = "Invalid Password";
+    errors.password = "Invalid Password";
   }
 
   // Ceck Password Length
