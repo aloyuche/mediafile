@@ -116,7 +116,7 @@ input {
 .passwordError {
   background-color: #7de6ec;
   color: #170408;
-  font-size: 1.3em;
+  font-size: 1.1rem;
   border: none;
 }
 .thumbnail.img {
@@ -573,6 +573,10 @@ ul li {
 ul li a {
   font-size: 1.3em;
   font-weight: bold;
+}
+ul li a:hover {
+  padding: 12px;
+  outline-color: #ccc;
 }
 .afro-content {
   background-color: #e8c29a;
