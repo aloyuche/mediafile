@@ -10,7 +10,6 @@ const musicCover = document.querySelector("#cover");
 
 // Song titles
 const songs = [
-  "DonnWil",
   "DonMoen",
   "Arabanko",
   "Bob",
@@ -18,6 +17,7 @@ const songs = [
   "Marley",
   "DonnWilli",
   "AnewDay",
+  "BRENDA_FASSIE",
 ];
 
 // Keep Songs track
