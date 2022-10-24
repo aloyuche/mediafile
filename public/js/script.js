@@ -10,12 +10,12 @@ const musicCover = document.querySelector("#cover");
 
 // Song titles
 const songs = [
-  "DonMoen",
+  "Celine_Luv",
   "Arabanko",
   "Bob",
   "Raggae",
   "Marley",
-  "DonnWilli",
+  "eric_donldson_-_land_of_my_birth",
   "AnewDay",
   "BRENDA_FASSIE",
 ];
