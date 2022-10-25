@@ -19,7 +19,12 @@ const songs = [
   "Alpha_Blondy Rasta_Poue",
   "BRENDA_FASSIE",
   "Alpha_Blondy Lune_de_miel",
-  "ANDY_SHURMAN Save_The_Masses",
+  "Bob_marly could_u_be_luvd",
+  "eric_donldson funny_how_love_can_be",
+  "BOB_MARLEY I_shot_the_sherrif",
+  "bob_marley who_the_cap",
+  "BOB_MARLEY Stir_up",
+  "Ana_Bara_Chukwu_Mba Chinyere",
 ];
 
 // Keep Songs track

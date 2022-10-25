@@ -12,8 +12,8 @@ const musicCover = document.querySelector("#cover");
 const songs = [
   "Celine_Luv",
   "Arabanko",
-  "Bob",
-  "Raggae",
+  "CELINE_DION...IF_WALLS_COULD_TALK",
+  "Celine_DION_1_heart_-I_know_what_love_is",
   "Marley",
   "eric_donldson_-_land_of_my_birth",
   "AnewDay",
