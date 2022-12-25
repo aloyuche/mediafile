@@ -64,7 +64,7 @@ app.get("/", async (req, res) => {
   res.render("index");
 });
 
-app.get("/home", requireAuth, (req, res) => {
+app.get("/home", (req, res) => {
   res.render("home");
 });
 
